@@ -1,24 +1,37 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import Image from 'next/image'
-import logo from '../assets/pokeball.png'
 
 export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathname = usePathname()
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+  // Auto-close menu when pathname changes
+  useEffect(() => {
+    setIsMenuOpen(false)
+  }, [pathname])
 
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        {/* <Link href="/">
-          <Image src={logo} alt="Logo" width={40} height={40} />
-        </Link> */}
         <Link href="/" className="text-logo">
           <h1>Bim Rai</h1>
         </Link>
       </div>
-      <div className="navbar-right">
+
+      <div className="navbar-toggler" onClick={toggleMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div className={`navbar-right ${isMenuOpen ? 'active' : ''}`}>
         <ul>
           <li><Link href="/" className={pathname === "/" ? "active" : ""}>Home</Link></li>
           <li><Link href="/projects" className={pathname === "/projects" ? "active" : ""}>Projects</Link></li>

@@ -10,8 +10,11 @@ const pixelFont = Press_Start_2P({
 })
 
 export const metadata = {
-  title: 'Your Portfolio',
+  title: 'Bim Rai',
   description: 'Welcome to my portfolio site.',
+  icons: {
+    icon: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({ children }) {
