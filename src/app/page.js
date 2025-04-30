@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import myImage from '../assets/pikachu.png'
+import myImage from '../assets/saturn.jpg'
 
 export default function HomePage() {
   return (
