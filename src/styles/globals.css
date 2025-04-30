@@ -29,7 +29,7 @@ body {
 /* Main Content */
 .main-content {
   flex: 1;
-  padding: 60px 20px 60px 20px;
+  padding: 40px 20px 60px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,6 +37,22 @@ body {
   gap: 50px;
   flex-direction: row;
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  
+  .main-content {
+    flex: 1;
+    padding: 10px 20px 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    flex-direction: row;
+  }
+
+}
+
 
 /* Floating Animation */
 @keyframes float {
@@ -90,8 +106,8 @@ body {
   }
 
   .home-left img {
-    width: 100px;  /* Adjust image size for mobile */
-    height: 100px;
+    width: 200px;
+    height: 200px;
     object-fit: contain; /* Keep image aspect ratio */
     animation: float 6s ease-in-out infinite; /* Keep float animation for mobile */
   }
@@ -541,5 +557,65 @@ body {
     padding: 6px;
     color: #888;
     font-size: 6px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-content, .home {
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 20px;
+  }
+
+  .home-left img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .home-right h1 {
+    font-size: rem;
+  }
+
+  .home-right p {
+    font-size: 1.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .education-item {
+    flex: 1 1 100%;
+  }
+
+  .about-container h1 {
+    font-size: 2rem;
+  }
+
+  .education-item h2 {
+    font-size: 1.25rem;
+  }
+
+  .education-item p,
+  .education-item li {
+    font-size: 0.85rem;
+  }
+
+  .social-row {
+    font-size: 1.75rem;
+  }
+
+  .contact-page h1 {
+    font-size: 2rem;
+  }
+
+  .pdf-viewer {
+    height: 500px;
+  }
+
+  .footer {
+    font-size: 10px;
+    padding: 8px;
   }
 }
