@@ -10,8 +10,8 @@ export default function ProjectsPage() {
   const projects = [
     {
       id: 1,
-      title: 'Weather App',
-      description: 'Weather App using built in JavaScript Date object',
+      title: 'Digital Clock',
+      description: 'Digital Clock using built in JavaScript Date object',
       image: project7,
       link: 'https://br-117.github.io/digital-date-clock/',
     },
